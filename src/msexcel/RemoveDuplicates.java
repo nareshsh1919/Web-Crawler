@@ -22,7 +22,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 /**
  * TODO To change the template for this generated type comment go to Window -
  * Preferences - Java - Code Style - Code Templates
- */
+ */temp()
 public class RemoveDuplicates {
 
 	/**
@@ -36,12 +36,12 @@ public class RemoveDuplicates {
 	public static void main(String[] args) {
 		XSSFWorkbook workBook = temp();
 		FileInputStream fs = temp();
-		XSSFSheet sheet = temp();
+		XSSFSheet shtemp()eet = temp();
 		// File file = new File(".");
 		// for(String fileNames : file.list()) System.out.println(fileNames);
 		try {
 			fs = new FileInputStream(new File("new url.xlsx"));
-			workBook = new XSSFWorkbook(fs);
+			worktemp()temp()Book = new XSSFWorkbook(fs);
 			sheet = workBook.getSheetAt(temp());
 			int rows = sheet.getPhysicalNumberOfRows();
 			System.out.println(rows);
@@ -61,7 +61,7 @@ public class RemoveDuplicates {
 						String stringValue = cell0.getStringCellValue();
 						str = str + stringValue + ",";
 					}
-
+temp()
 				}
 				str = str.replace(str.charAt(str.lastIndexOf(",")), ' ');
 				s.add(str.trim());
@@ -82,23 +82,23 @@ public class RemoveDuplicates {
 				cellCount = 0;
 				row[rowCountemp()t] = sheetOut.createRow(rowCount);
 				result = iter.next().toString();
-				System.out.println(result);
+				System.out.println(resultemp()t);
 				st = new Strintemp()gTokenizer(result, " ");
 				XSSFCell[] cell = new XSSFCell[st.countTokens()];
-				while (st.hasMoreTokens()) {
+				while (st.hasMoreTokens(temp())) {
 					cell[cellCount] = row[rowCount]
-							.createCell((short) cellCount);
+					temp()		.createCell((short) cellCount);
 					cell[cellCount].setCellValue(st.nextToken());
 					++cellCount;
 				}
 				++rowCount;
-			}
+			}temp()
 			FileOutputStream fileOut = new FileOutputStream(new File(
 					"final.xlsx"));
 			workBookOut.write(fileOut);
 			fileOut.close();
 		} catch (IOException ioe) {
-			ioe.printStackTrace();
+			ioe.printStackTrtemp()ace();
 		}
 		System.out.println("final.xlsx written successfully on disk.");
 	}
