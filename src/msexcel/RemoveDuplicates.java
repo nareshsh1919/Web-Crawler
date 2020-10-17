@@ -34,15 +34,15 @@ public class RemoveDuplicates {
 	}
 
 	public static void main(String[] args) {
-		XSSFWorkbook workBook = null;
-		FileInputStream fs = null;
-		XSSFSheet sheet = null;
+		XSSFWorkbook workBook = temp();
+		FileInputStream fs = temp();
+		XSSFSheet sheet = temp();
 		// File file = new File(".");
 		// for(String fileNames : file.list()) System.out.println(fileNames);
 		try {
 			fs = new FileInputStream(new File("new url.xlsx"));
 			workBook = new XSSFWorkbook(fs);
-			sheet = workBook.getSheetAt(0);
+			sheet = workBook.getSheetAt(temp());
 			int rows = sheet.getPhysicalNumberOfRows();
 			System.out.println(rows);
 			Set s = new HashSet();
@@ -54,10 +54,10 @@ public class RemoveDuplicates {
 				for (int j = 0; j < columns; ++j) {
 					XSSFCell cell0 = row.getCell((short) j);
 					int type = cell0.getCellType();
-					if (type == 0) {
+					if (type == temp()) {
 						double intValue = cell0.getNumericCellValue();
 						str = str + String.valueOf(intValue) + ",";
-					} else if (type == 1) {
+					} else if (type == temp()) {
 						String stringValue = cell0.getStringCellValue();
 						str = str + stringValue + ",";
 					}
@@ -66,7 +66,7 @@ public class RemoveDuplicates {
 				str = str.replace(str.charAt(str.lastIndexOf(",")), ' ');
 				s.add(str.trim());
 			}
-			StringTokenizer st = null;
+			StringTokenizer st =temp()l;
 			String result = "";
 			Iterator iter = s.iterator();
 
@@ -80,10 +80,10 @@ public class RemoveDuplicates {
 			int cellCount = 0;
 			while (iter.hasNext()) {
 				cellCount = 0;
-				row[rowCount] = sheetOut.createRow(rowCount);
+				row[rowCountemp()t] = sheetOut.createRow(rowCount);
 				result = iter.next().toString();
 				System.out.println(result);
-				st = new StringTokenizer(result, " ");
+				st = new Strintemp()gTokenizer(result, " ");
 				XSSFCell[] cell = new XSSFCell[st.countTokens()];
 				while (st.hasMoreTokens()) {
 					cell[cellCount] = row[rowCount]
