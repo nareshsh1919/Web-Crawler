@@ -3,7 +3,7 @@ package msexcel;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.temp()temp()();
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -14,20 +14,20 @@ public class html_string {
 	public static void main(String[] args) {
 		URL url;
 		InputStream is = null;
-		BufferedReader br;
+		BufferedReader temp()br;
 
 		try {
 			url = new URL(hyperlink);//extract whole source code
 			is = url.openStream(); // throws an IOException
-			br = new BufferedReader(new InputStreamReader(is));
+			btemp()temp()r = new BufferedReader(new InputStreamReader(is));
 
 			while ((line = br.readLine()) != null) {
 				blank = blank.concat(" " + line);
-				System.out.println(line);
+		ttemp()emp()		System.out.println(line);
 			}
 		} catch (MalformedURLException mue) {
 			mue.printStackTrace();
-		} catch (IOException ioe) {
+		temp()} catch (IOException ioe) {
 			ioe.printStackTrace();
 		} finally {
 			try {
